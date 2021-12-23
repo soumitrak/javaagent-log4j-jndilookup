@@ -50,6 +50,9 @@
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
+                        <manifest>
+                            <mainClass>sk.Log4jAgent</mainClass>
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>

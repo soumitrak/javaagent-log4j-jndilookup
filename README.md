@@ -4,4 +4,8 @@
 
 # How to run
 - mvn clean install
-- Try: java -javaagent:<path to target/JavaAgent-1.0-jar-with-dependencies.jar> <rest of JVM args> 
+- For static loading: java -javaagent:<path to JavaAgent-1.0-jar-with-dependencies.jar> <rest of JVM args> 
+- For dynamically loading the agent to already running process:
+  - File the process id of the target Java process to attach the agent
+  - java -jar <path to JavaAgent-1.0-jar-with-dependencies.jar> <path to JavaAgent-1.0-jar-with-dependencies.jar> <PID>
+  - If you get java.lang.VerifyError, then the target process should be running with -Xverify:none

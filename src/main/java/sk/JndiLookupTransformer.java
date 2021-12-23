@@ -19,7 +19,7 @@ public class JndiLookupTransformer implements ClassFileTransformer {
     private final String jndiClassName;
 
     JndiLookupTransformer(String jndiClassName) {
-        this.jndiClassName = jndiClassName;
+        this.jndiClassName = jndiClassName.replace('.', '/');
     }
 
     @Override
